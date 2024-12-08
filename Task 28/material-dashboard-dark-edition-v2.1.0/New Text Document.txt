@@ -1,0 +1,68 @@
+CREATE TABLE WebsiteLogo (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ImageURL VARCHAR(255) NOT NULL
+);
+
+        const apiUrlGet = 'http://localhost/Task%2028/material-dashboard-dark-edition-v2.1.0/examples/api/get.php?table=WebsiteLogo';
+
+///////////////
+
+CREATE TABLE `home` (
+  `ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `Title` VARCHAR(255) NOT NULL,
+  `SubTitle` VARCHAR(255) NOT NULL,
+  `Description` TEXT DEFAULT NULL,
+  `PDF_URL` VARCHAR(255) DEFAULT NULL,
+  `ImageURL` VARCHAR(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+        const apiUrlGetHome = 'http://localhost/Task%2028/material-dashboard-dark-edition-v2.1.0/examples/api/get.php?table=home';
+
+/////////
+
+CREATE TABLE About (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ImageURL VARCHAR(255),  -- لتخزين رابط الصورة
+    Title VARCHAR(255) NOT NULL,  -- لتخزين العنوان
+    Description TEXT,  -- لتخزين الوصف
+    PDF_URL VARCHAR(255)  -- لتخزين رابط الـ PDF
+);
+        const apiUrlGetAbout = 'http://localhost/Task%2028/material-dashboard-dark-edition-v2.1.0/examples/api/get.php?table=About';
+
+
+/////////////////////
+
+CREATE TABLE Experience (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    YearsOfExperience INT NOT NULL,  -- عدد سنوات الخبرة
+    PhoneNumber VARCHAR(15) NOT NULL  -- رقم الهاتف
+);
+
+                const apiUrlGetExperience = 'http://localhost/Task%2028/material-dashboard-dark-edition-v2.1.0/examples/api/get.php?table=Experience';
+
+////////////////////////
+
+
+
+//////////////////////
+
+CREATE TABLE Portfolio (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Category ENUM('popular', 'latest', 'following', 'upcoming') NOT NULL,  -- تحديد الفئات الممكنة
+    ImageURL VARCHAR(255),  -- رابط الصورة
+    Title VARCHAR(255) NOT NULL  -- العنوان
+);
+                const apiUrlGetPortfolio = 'http://localhost/Task%2028/material-dashboard-dark-edition-v2.1.0/examples/api/get.php?table=Portfolio';
+
+
+////////////////////////
+
+CREATE TABLE Contact (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    FacebookURL VARCHAR(255),  -- رابط الفيسبوك
+    InstagramURL VARCHAR(255),  -- رابط الإنستغرام
+    LinkedInURL VARCHAR(255)  -- رابط اللينكد إن
+);
+
+
+        const apiUrlGetContact = 'http://localhost/Task%2028/material-dashboard-dark-edition-v2.1.0/examples/api/get.php?table=Contact';
